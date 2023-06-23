@@ -1,0 +1,31 @@
+Khan Academy SQL Project Project: Design a store database - Tech CEO outfit store
+
+--Create a Tech store database
+CREATE TABLE Tech_CEO_outfit_store(id INTEGER PRIMARY KEY, name TEXT, brand TEXT, color TEXT, size TEXT, quantity INTEGER, price INTEGER);
+
+INSERT INTO Tech_CEO_outfit_store VALUES(1, "turtleneck", "Issey Miyake", "black", "S", 3, 270); 
+INSERT INTO Tech_CEO_outfit_store VALUES(2, "turtleneck", "H&M",  "black", "M", 4, 270); 
+INSERT INTO Tech_CEO_outfit_store VALUES(3, "turtleneck", "H&M",  "black", "L", 5, 270); 
+INSERT INTO Tech_CEO_outfit_store VALUES(4, "jeans", "Levi's 501",  "blue", "28", 5, 137.99); 
+INSERT INTO Tech_CEO_outfit_store VALUES(5, "jeans", "Levi's 501",  "blue", "30", 7, 137.99); 
+INSERT INTO Tech_CEO_outfit_store VALUES(6, "jeans", "Levi's 501",  "blue", "32", 9, 137.99); 
+INSERT INTO Tech_CEO_outfit_store VALUES(7, "sneakers", "New Balance 991",  "grey", "9.0", 9, 169.99); 
+INSERT INTO Tech_CEO_outfit_store VALUES(8, "sneakers", "New Balance 991",  "grey", "9.5", 9, 169.99); 
+INSERT INTO Tech_CEO_outfit_store VALUES(9, "sneakers", "New Balance 991",  "grey", "10.0", 1, 179.99); 
+INSERT INTO Tech_CEO_outfit_store VALUES(10, "t-shirt", "Brunello Cucinelli",  "grey", "S", 1, 299.99); 
+INSERT INTO Tech_CEO_outfit_store VALUES(11, "t-shirt", "Brunello Cucinelli",  "grey", "M", 2, 349.99); 
+INSERT INTO Tech_CEO_outfit_store VALUES(12, "t-shirt", "Brunello Cucinelli",  "grey", "L", 3, 399.99); 
+INSERT INTO Tech_CEO_outfit_store VALUES(13, "sneakers", "Nike Free RN 2017",  "black", "9.5", 5, 89.99); 
+INSERT INTO Tech_CEO_outfit_store VALUES(14, "sneakers", "Nike Free RN 2017",  "black", "10.0", 5, 89.99); 
+INSERT INTO Tech_CEO_outfit_store VALUES(15, "sneakers", "Nike Free RN 2017",  "black", "10.5", 5, 89.99); 
+INSERT INTO Tech_CEO_outfit_store VALUES(16, "vest", "Patagonia",  "nickel", "M", 11, 79); 
+INSERT INTO Tech_CEO_outfit_store VALUES(17, "vest", "Patagonia",  "nickel", "L", 12, 79); 
+INSERT INTO Tech_CEO_outfit_store VALUES(18, "vest", "Patagonia",  "nickel", "XL", 13, 79); 
+--display the database ordered by price. 
+
+SELECT * FROM Tech_CEO_outfit_store;
+SELECT name, brand, price FROM Tech_CEO_outfit_store WHERE price < 180  ORDER BY price;
+
+--display sum 
+
+SELECT SUM(quantity) FROM Tech_CEO_outfit_store WHERE price < 180;
